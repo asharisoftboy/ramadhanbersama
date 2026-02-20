@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RamadhanKu - Pribadi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,6 +20,9 @@
     <a href="#juz">Juz</a>
     <a href="#catatan">Catatan</a>
     <a href="#jadwal">Jadwal</a>
+    <button onclick="window.location.href='idul-fitri.html'">
+    Buka Halaman Idul Fitri
+</button>
 </aside>
 
     <!-- Background Elements -->
@@ -34,8 +38,8 @@
             </div>
             <nav class="nav">
                 <a href="#beranda" class="nav-link active">Beranda</a>
-                <a href="#juz" class="nav-link">Juz</a>
                 <a href="#progress" class="nav-link">Progress</a>
+                <a href="#juz" class="nav-link">Juz</a>
             </nav>
         </div>
     </header>
@@ -86,6 +90,46 @@
             </div>
         </div>
     </section>
+    <!-- DZIKIR & AGENDA -->
+<section class="ibadah-section" id="ibadah">
+    <div class="container">
+
+        <h2>🕌 Ibadah Harian</h2>
+
+        <!-- JAM DIGITAL -->
+        <div class="clock-box">
+            <h3>Jam Sekarang</h3>
+            <div id="digitalClock">00:00:00</div>
+            <p id="reminderText">Menunggu waktu ibadah...</p>
+        </div>
+
+        <!-- TOMBOL DZIKIR -->
+        <div class="dzikir-box">
+            <h3>Dzikir Counter</h3>
+            <div id="dzikirCount">0</div>
+            <button onclick="tambahDzikir()">Tambah Dzikir</button>
+            <button onclick="resetDzikir()">Reset</button>
+        </div>
+
+        <!-- AGENDA HARIAN -->
+        <div class="agenda-box">
+            <h3>Agenda Harian</h3>
+            <ul id="agendaList">
+                <li onclick="toggleDone(this)">Sahur</li>
+                <li onclick="toggleDone(this)">Sholat Subuh</li>
+                <li onclick="toggleDone(this)">Sholat Dzuhur</li>
+                <li onclick="toggleDone(this)">Sholat Ashar</li>
+                <li onclick="toggleDone(this)">Sholat Maghrib</li>
+                <li onclick="toggleDone(this)">Sholat Isya</li>
+                <li onclick="toggleDone(this)">Tarawih</li>
+                <li onclick="toggleDone(this)">Kuliah Subuh</li>
+                <li onclick="toggleDone(this)">Kajian Sore</li>
+                <li onclick="toggleDone(this)">Berdzikir</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
 
     <!-- Progress Overview -->
     <section class="progress-section" id="progress">
@@ -206,4 +250,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html>s
