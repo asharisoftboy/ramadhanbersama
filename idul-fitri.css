@@ -208,3 +208,25 @@ letter-spacing:2px;
 opacity:0.8;
 font-size:0.95rem;
 }
+/* ===== EXIT BUTTON ===== */
+
+.btn-exit{
+position:fixed;
+top:20px;
+right:20px;
+padding:8px 20px;
+background:linear-gradient(90deg,#d4af37,#f6e27a);
+color:#064e3b;
+border:none;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s ease;
+z-index:10000;
+}
+
+.btn-exit:hover{
+transform:translateY(-3px);
+}
