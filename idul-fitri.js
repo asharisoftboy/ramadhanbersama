@@ -8,26 +8,38 @@ for (let i = 0; i < 30; i++) {
 }
 
 // COUNTDOWN
-const idulFitri = new Date("March 21, 2026 00:00:00").getTime();
-const countdownEl = document.getElementById("countdown");
+// ===== AUTO LOCK SYSTEM 00:00 =====
 
-setInterval(() => {
+// SET TANGGAL IDUL FITRI (UBAH JIKA PERLU)
+const idulFitriDate = new Date("March 31, 2026 00:00:00").getTime();
+
+const overlay = document.getElementById("overlayLock");
+const lockCountdown = document.getElementById("lockCountdown");
+
+const timer = setInterval(() => {
     const now = new Date().getTime();
-    const distance = idulFitri - now;
+    const distance = idulFitriDate - now;
 
-    if (distance < 0) {
-        countdownEl.innerHTML = "Selamat Hari Raya Idul Fitri 🎉";
+    if (distance <= 0) {
+        clearInterval(timer);
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+            overlay.style.display = "none";
+        }, 1000);
         return;
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdownEl.innerHTML =
+    lockCountdown.innerHTML =
         days + " Hari " +
-        hours + " Jam " +
-        minutes + " Menit lagi";
+        String(hours).padStart(2, '0') + ":" +
+        String(minutes).padStart(2, '0') + ":" +
+        String(seconds).padStart(2, '0');
+
 }, 1000);
 
 // MUSIC
@@ -48,4 +60,5 @@ function shareWA() {
     const nama = document.getElementById("nama").value || "Sahabatku";
     const text = "Minal Aidzin Wal Faidzin, Mohon Maaf Lahir dan Batin dari " + nama + " 🙏";
     window.open("https://wa.me/?text=0881012137318" + encodeURIComponent(text), "_blank");
+
 }
