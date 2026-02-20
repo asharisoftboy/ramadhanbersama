@@ -11,7 +11,7 @@ for (let i = 0; i < 30; i++) {
 // ===== AUTO LOCK SYSTEM 00:00 =====
 
 // SET TANGGAL IDUL FITRI (UBAH JIKA PERLU)
-const idulFitriDate = new Date("March 31, 2026 00:00:00").getTime();
+const idulFitriDate = new Date("March 21, 2026 00:00:00").getTime();
 
 const overlay = document.getElementById("overlayLock");
 const lockCountdown = document.getElementById("lockCountdown");
@@ -62,3 +62,4 @@ function shareWA() {
     window.open("https://wa.me/?text=0881012137318" + encodeURIComponent(text), "_blank");
 
 }
+
