@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idul Fitri Mubarak</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="idul-fitri.css">
+</head>
+
+<body>
+
+<div class="hero">
+<div class="moon"></div>
+
+<h1>Minal Aidzin Wal Faidzin</h1>
+<p>Mohon Maaf Lahir dan Batin</p>
+
+<div class="takbir">
+الله أكبر الله أكبر الله أكبر<br>
+لا إله إلا الله والله أكبر<br>
+الله أكبر ولله الحمد
+</div>
+
+<div class="countdown" id="countdown"></div>
+
+<div class="input-name">
+<input type="text" id="nama" placeholder="Tulis nama kamu">
+</div>
+
+<button class="music-btn" onclick="toggleMusic()">🔊 Putar Takbir</button>
+<audio id="takbirAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+</div>
+
+<section>
+<h2 class="section-title">Kartu Ucapan</h2>
+
+<div class="cards">
+<div class="card">Semoga hari kemenangan membawa kebahagiaan dan keberkahan untukmu.</div>
+<div class="card">Di hari yang suci ini, mari kita saling memaafkan dan mempererat silaturahmi.</div>
+<div class="card">Taqabbalallahu منا ومنكم. Semoga amal ibadah kita diterima Allah SWT.</div>
+</div>
+
+<button class="share-btn" onclick="shareWA()">Share ke WhatsApp</button>
+</section>
+
+<script src="idul-fitri.js"></script>
+</body>
+</html>
