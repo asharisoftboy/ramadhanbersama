@@ -3,251 +3,893 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RamadhanKu - Pribadi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Selamat Idul Fitri 1447H - Ashari Saefataher</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --light-blue: #87CEEB;
+            --sky-blue: #5DADE2;
+            --deep-blue: #2E86AB;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --cream: #fef9e7;
+            --gold: #FFD700;
+            --gold-light: #FFED4A;
+            --gold-dark: #D4AF37;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 40%, var(--light-blue) 70%, var(--white) 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: var(--white);
+        }
+
+        /* Particle Animation - Gold Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: float 12s infinite;
+            box-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold-light);
+        }
+
+        .particle:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 10s; width: 6px; height: 6px; }
+        .particle:nth-child(2) { left: 15%; animation-delay: 1s; animation-duration: 14s; width: 10px; height: 10px; }
+        .particle:nth-child(3) { left: 25%; animation-delay: 3s; animation-duration: 11s; width: 7px; height: 7px; }
+        .particle:nth-child(4) { left: 35%; animation-delay: 0.5s; animation-duration: 16s; width: 12px; height: 12px; }
+        .particle:nth-child(5) { left: 45%; animation-delay: 2s; animation-duration: 13s; width: 8px; height: 8px; }
+        .particle:nth-child(6) { left: 55%; animation-delay: 4s; animation-duration: 15s; width: 9px; height: 9px; }
+        .particle:nth-child(7) { left: 65%; animation-delay: 1.5s; animation-duration: 12s; width: 6px; height: 6px; }
+        .particle:nth-child(8) { left: 75%; animation-delay: 3.5s; animation-duration: 17s; width: 11px; height: 11px; }
+        .particle:nth-child(9) { left: 85%; animation-delay: 2.5s; animation-duration: 14s; width: 7px; height: 7px; }
+        .particle:nth-child(10) { left: 95%; animation-delay: 0.8s; animation-duration: 18s; width: 10px; height: 10px; }
+        .particle:nth-child(11) { left: 10%; animation-delay: 5s; animation-duration: 13s; width: 8px; height: 8px; }
+        .particle:nth-child(12) { left: 30%; animation-delay: 6s; animation-duration: 16s; width: 9px; height: 9px; }
+        .particle:nth-child(13) { left: 50%; animation-delay: 4.5s; animation-duration: 11s; width: 6px; height: 6px; }
+        .particle:nth-child(14) { left: 70%; animation-delay: 7s; animation-duration: 15s; width: 12px; height: 12px; }
+        .particle:nth-child(15) { left: 90%; animation-delay: 5.5s; animation-duration: 12s; width: 7px; height: 7px; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.9;
+            }
+            50% {
+                transform: translateY(50vh) rotate(360deg) scale(1.2);
+            }
+            90% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkle Animation */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: sparkle 3s infinite;
+            opacity: 0.8;
+        }
+
+        .sparkle:nth-child(16) { left: 8%; top: 20%; animation-delay: 0s; }
+        .sparkle:nth-child(17) { left: 22%; top: 60%; animation-delay: 0.5s; }
+        .sparkle:nth-child(18) { left: 40%; top: 30%; animation-delay: 1s; }
+        .sparkle:nth-child(19) { left: 58%; top: 70%; animation-delay: 1.5s; }
+        .sparkle:nth-child(20) { left: 75%; top: 25%; animation-delay: 2s; }
+        .sparkle:nth-child(21) { left: 88%; top: 55%; animation-delay: 2.5s; }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Shake Animation */
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        /* Takbiran Arabic */
+        .takbiran {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+            line-height: 1.8;
+            animation: glow 1.5s ease-in-out infinite alternate, bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.5), 0 0 70px rgba(255, 215, 0, 0.3);
+            }
+        }
+
+        /* Personal Greeting */
+        .personal-greeting {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: var(--white);
+            margin-bottom: 10px;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .personal-name {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: var(--gold);
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Main Title */
+        .main-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-shadow: none;
+            filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.4));
+            animation: fadeInUp 1s ease-out 0.4s both, shake 3s ease-in-out infinite;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--white);
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            margin: 30px 0;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .countdown-title {
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: 20px 25px;
+            min-width: 90px;
+            backdrop-filter: blur(10px);
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .countdown-item:nth-child(2) { animation-delay: 0.2s; }
+        .countdown-item:nth-child(3) { animation-delay: 0.4s; }
+        .countdown-item:nth-child(4) { animation-delay: 0.6s; }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Name Input Section */
+        .name-section {
+            margin: 30px 0;
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+
+        .name-input {
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1rem;
+            color: var(--white);
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .name-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .name-input:focus {
+            border-color: var(--gold-light);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        /* Audio Button */
+        .audio-btn {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            color: var(--deep-blue);
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+            animation: fadeInUp 1s ease-out 0.8s both, bounce 2s ease-in-out infinite;
+        }
+
+        .audio-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7);
+        }
+
+        .audio-btn.playing {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.5);
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        .audio-icon {
+            font-size: 1.3rem;
+        }
+
+        /* Greeting Card */
+        .greeting-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            padding: 45px 35px;
+            max-width: 550px;
+            margin: 30px auto;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), 
+                        0 0 40px rgba(255, 215, 0, 0.2),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out 0.9s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .greeting-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+            animation: shimmer 2s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .card-message {
+            font-size: 1.05rem;
+            color: var(--white);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .personalized-name {
+            color: var(--gold);
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* QRIS Section */
+        .qris-section {
+            margin: 30px 0;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .qris-container {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 25px;
+            padding: 30px;
+            display: inline-block;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.2);
+            border: 2px solid var(--gold);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .qris-title {
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .qris-placeholder {
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 3px dashed var(--gold);
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .qris-placeholder:hover {
+            transform: scale(1.05);
+            border-color: var(--gold-light);
+        }
+
+        .qris-icon {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .qris-text {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .qris-hint {
+            color: var(--deep-blue);
+            font-size: 1rem;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        /* Share Button */
+        .share-btn {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            color: var(--white);
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
+            text-decoration: none;
+            animation: fadeInUp 1s ease-out 1.1s both, bounce 2s ease-in-out infinite;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 35px rgba(37, 211, 102, 0.7);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-heart {
+            color: #e74c3c;
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .confetti-1 { background: var(--gold); left: 10%; animation: confetti-fall 5s linear infinite; }
+        .confetti-2 { background: var(--gold-light); left: 30%; animation: confetti-fall 6s linear infinite 1s; }
+        .confetti-3 { background: var(--gold-dark); left: 50%; animation: confetti-fall 4s linear infinite 0.5s; }
+        .confetti-4 { background: var(--gold); left: 70%; animation: confetti-fall 5.5s linear infinite 2s; }
+        .confetti-5 { background: var(--gold-light); left: 90%; animation: confetti-fall 4.5s linear infinite 1.5s; }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 15px;
+            }
+
+            .countdown {
+                gap: 10px;
+            }
+
+            .countdown-item {
+                padding: 15px 18px;
+                min-width: 70px;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .greeting-card {
+                padding: 35px 25px;
+                margin: 20px 15px;
+            }
+
+            .qris-placeholder {
+                width: 180px;
+                height: 180px;
+            }
+
+            .personal-greeting {
+                font-size: 0.95rem;
+            }
+
+            .personal-name {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Fade in animation for all elements */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--gold);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Firework Animation */
+        .firework {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .firework-1 { background: var(--gold); top: 20%; left: 20%; animation: explode 3s ease-out infinite; }
+        .firework-2 { background: var(--gold-light); top: 30%; left: 80%; animation: explode 4s ease-out infinite 1s; }
+        .firework-3 { background: var(--gold); top: 60%; left: 50%; animation: explode 3.5s ease-out infinite 2s; }
+
+        @keyframes explode {
+            0% { transform: scale(0); opacity: 1; box-shadow: 0 0 0 0 var(--gold); }
+            50% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.5); }
+            100% { transform: scale(2); opacity: 0; box-shadow: 0 0 40px 20px rgba(255, 215, 0, 0); }
+        }
+    </style>
+<base target="_blank">
 </head>
 <body>
-    <!-- Sidebar -->
-<aside class="sidebar">
-    <h3><i class="fas fa-layer-group"></i> Menu</h3>
-    <a href="#beranda">Beranda</a>
-    <a href="#progress">Progress</a>
-    <a href="#juz">Juz</a>
-    <a href="#catatan">Catatan</a>
-    <a href="#jadwal">Jadwal</a>
-    <button onclick="window.location.href='idul-fitri.html'">
-    Buka Halaman Idul Fitri
-</button>
-</aside>
+    <!-- Confetti -->
+    <div class="confetti confetti-1"></div>
+    <div class="confetti confetti-2"></div>
+    <div class="confetti confetti-3"></div>
+    <div class="confetti confetti-4"></div>
+    <div class="confetti confetti-5"></div>
 
-    <!-- Background Elements -->
-    <div class="bg-moon"></div>
-    <div class="bg-stars" id="stars"></div>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-moon"></i>
-                <span>RamadhanKu</span>
-            </div>
-            <nav class="nav">
-                <a href="#beranda" class="nav-link active">Beranda</a>
-                <a href="#progress" class="nav-link">Progress</a>
-                <a href="#juz" class="nav-link">Juz</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Fireworks -->
+    <div class="firework firework-1"></div>
+    <div class="firework firework-2"></div>
+    <div class="firework firework-3"></div>
 
-    <!-- Hero Section with Countdown -->
-    <section class="hero" id="beranda">
-        <div class="container">
-            <div class="hero-content">
-                <div class="greeting">
-                    <span class="greeting-icon">🌙</span>
-                    <p class="greeting-text" id="greetingText">Selamat Datang</p>
-                </div>
-                <h1 class="hero-title">
-                    <span class="arabic">رمضان كريم</span>
-                    <span class="latin">Ramadhan Kareem</span>
-                </h1>
-                <p class="hero-subtitle">Mari sempurnakan ibadah membaca Al-Qur'an bulan ini</p>
-                
-                <!-- Countdown Card -->
-                <div class="countdown-card">
-                    <div class="countdown-header">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Menuju Idul Fitri</span>
+    <!-- Particles Animation - Gold -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Takbiran Arabic -->
+            <div class="takbiran">
+                الله أكبر الله أكبر<br>
+                لا إله إلا الله<br>
+                الله أكبر الله أكبر<br>
+                ولله الحمد
+            </div>
+
+            <!-- Personal Greeting -->
+            <p class="personal-greeting">Saya</p>
+            <p class="personal-name">Ashari Saefataher</p>
+            <p class="personal-greeting" style="margin-top: 10px; margin-bottom: 20px;">Mengucapkan</p>
+
+            <!-- Main Title -->
+            <h1 class="main-title">Selamat Idul Fitri</h1>
+
+            <!-- Subtitle -->
+            <p class="subtitle">Minal Aidzin Wal Faidzin<br>Mohon Maaf Lahir dan Batin</p>
+
+            <!-- Countdown Section -->
+            <div class="countdown-section">
+                <p class="countdown-title">✨ Menuju Lebaran 1447H ✨</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Hari</span>
                     </div>
-                    <div class="countdown-timer" id="countdown">
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="days">00</span>
-                            <span class="countdown-label">Hari</span>
-                        </div>
-                        <div class="countdown-separator">:</div>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="hours">00</span>
-                            <span class="countdown-label">Jam</span>
-                        </div>
-                        <div class="countdown-separator">:</div>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="minutes">00</span>
-                            <span class="countdown-label">Menit</span>
-                        </div>
-                        <div class="countdown-separator">:</div>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="seconds">00</span>
-                            <span class="countdown-label">Detik</span>
-                        </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Jam</span>
                     </div>
-                    <div class="countdown-date" id="idulFitriDate">1 Syawal 1447 H</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Menit</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Detik</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Name Input -->
+            <div class="name-section">
+                <input type="text" class="name-input" id="nameInput" placeholder="Masukkan nama Anda..." maxlength="30">
+            </div>
+
+            <!-- Audio Button -->
+            <button class="audio-btn" id="audioBtn">
+                <span class="audio-icon">▶️</span>
+                <span id="audioText">Putar Takbiran</span>
+            </button>
+
+            <!-- Greeting Card -->
+            <div class="greeting-card">
+                <div class="card-icon">🌙</div>
+                <h3 class="card-title">Taqqaballahu Minna Wa Minkum</h3>
+                <p class="card-message">
+                    Semoga Allah menerima amal ibadah kita dan mengampuni segala dosa kita. 
+                    <span id="personalizedGreeting"></span>
+                </p>
+                <p class="card-message" style="font-style: italic; color: var(--gold); text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);">
+                    "Taqabbalallahu minna wa minkum, shiyamana wa shiyamakum, 
+                    ja'ananallahu wa iyyakum minal 'aidin wal faizin"
+                </p>
+            </div>
+
+            <!-- QRIS Section -->
+            <div class="qris-section">
+                <div class="qris-container">
+                    <p class="qris-title">🎁 THR Digital</p>
+                    <div class="qris-placeholder">
+                        <div class="qris-icon">📱</div>
+                        <p class="qris-text">QRIS Placeholder</p>
+                    </div>
+                    <p class="qris-hint">Scan untuk THR 😆</p>
+                </div>
+            </div>
+
+            <!-- Share Button -->
+            <a href="#" class="share-btn" id="shareBtn">
+                <span>📱</span>
+                <span>Bagikan ke WhatsApp</span>
+            </a>
         </div>
     </section>
-    <!-- DZIKIR & AGENDA -->
-<section class="ibadah-section" id="ibadah">
-    <div class="container">
-
-        <h2>🕌 Ibadah Harian</h2>
-
-        <!-- JAM DIGITAL -->
-        <div class="clock-box">
-            <h3>Jam Sekarang</h3>
-            <div id="digitalClock">00:00:00</div>
-            <p id="reminderText">Menunggu waktu ibadah...</p>
-        </div>
-
-        <!-- TOMBOL DZIKIR -->
-        <div class="dzikir-box">
-            <h3>Dzikir Counter</h3>
-            <div id="dzikirCount">0</div>
-            <button onclick="tambahDzikir()">Tambah Dzikir</button>
-            <button onclick="resetDzikir()">Reset</button>
-        </div>
-
-        <!-- AGENDA HARIAN -->
-        <div class="agenda-box">
-            <h3>Agenda Harian</h3>
-            <ul id="agendaList">
-                <li onclick="toggleDone(this)">Sahur</li>
-                <li onclick="toggleDone(this)">Sholat Subuh</li>
-                <li onclick="toggleDone(this)">Sholat Dzuhur</li>
-                <li onclick="toggleDone(this)">Sholat Ashar</li>
-                <li onclick="toggleDone(this)">Sholat Maghrib</li>
-                <li onclick="toggleDone(this)">Sholat Isya</li>
-                <li onclick="toggleDone(this)">Tarawih</li>
-                <li onclick="toggleDone(this)">Kuliah Subuh</li>
-                <li onclick="toggleDone(this)">Kajian Sore</li>
-                <li onclick="toggleDone(this)">Berdzikir</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-    <!-- Progress Overview -->
-    <section class="progress-section" id="progress">
-        <div class="container">
-            <div class="progress-card">
-                <div class="progress-info">
-                    <div class="progress-icon">
-                        <i class="fas fa-book-quran"></i>
-                    </div>
-                    <div class="progress-text">
-                        <h3>Progress Membaca Al-Qur'an</h3>
-                        <p id="progressText">0 dari 30 Juz selesai</p>
-                    </div>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progressBar">
-                        <div class="progress-fill" id="progressFill"></div>
-                    </div>
-                    <span class="progress-percent" id="progressPercent">0%</span>
-                </div>
-                <div class="progress-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="completedCount">0</span>
-                        <span class="stat-label">Juz Selesai</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="remainingCount">30</span>
-                        <span class="stat-label">Sisa Juz</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Juz Grid Section -->
-    <section class="juz-section" id="juz">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-list-ol"></i>
-                    Daftar Juz Al-Qur'an
-                </h2>
-                <p class="section-subtitle">Klik pada kartu untuk melihat detail dan menandai selesai</p>
-            </div>
-            
-            <div class="juz-grid" id="juzGrid">
-                <!-- Juz cards will be generated by JavaScript -->
-            </div>
-        </div>
-    </section>
-    <!-- Catatan Ramadhan -->
-<section class="catatan-section" id="catatan">
-    <div class="container">
-        <h2><i class="fas fa-pen"></i> Catatan Ramadhan</h2>
-        <textarea id="catatanText" placeholder="Tulis target, refleksi, atau muhasabah harian..."></textarea>
-        <button onclick="saveCatatan()">Simpan Catatan</button>
-    </div>
-</section>
-<!-- Jadwal Sholat -->
-<section class="jadwal-section" id="jadwal">
-    <div class="container">
-        <h2><i class="fas fa-clock"></i> Jadwal Sholat Hari Ini</h2>
-        <div class="jadwal-grid">
-            <div class="jadwal-card"><h4>Imsak</h4><span id="imsak">-</span></div>
-            <div class="jadwal-card"><h4>Subuh</h4><span id="subuh">-</span></div>
-            <div class="jadwal-card"><h4>Dzuhur</h4><span id="dzuhur">-</span></div>
-            <div class="jadwal-card"><h4>Ashar</h4><span id="ashar">-</span></div>
-            <div class="jadwal-card"><h4>Maghrib</h4><span id="maghrib">-</span></div>
-            <div class="jadwal-card"><h4>Isya</h4><span id="isya">-</span></div>
-        </div>
-    </div>
-</section>
-
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <i class="fas fa-moon"></i>
-                    <span>RamadhanKu</span>
-                </div>
-                <p class="footer-text">Semoga Ramadhan kali ini membawa berkah dan keberkahan untuk kita semua.</p>
-                <div class="footer-quote">
-                    <span class="quote-arabic">"إِنَّ مَعَ الْعُسْرِ يُسْرًا"</span>
-                    <span class="quote-latin">"Sesungguhnya bersama kesulitan ada kemudahan."</span>
-                    <span class="quote-source">(QS. Al-Insyirah: 6)</span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 RamadhanKu - Dibuat dengan <i class="fas fa-heart"></i> untuk ibadah</p>
-            </div>
-        </div>
+        <p>Dibuat dengan <span class="footer-heart">❤</span> oleh Ashari Saefataher</p>
+        <p style="margin-top: 5px;">1 Syawal 1447H | 21 Maret 2026</p>
     </footer>
 
-    <!-- Reset Confirmation Modal -->
-    <div class="modal" id="resetModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <i class="fas fa-exclamation-triangle"></i>
-                <h3>Reset Progress?</h3>
-            </div>
-            <div class="modal-body">
-                <p>Semua data progress akan dihapus. Tindakan ini tidak dapat dibatalkan.</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" onclick="closeModal()">Batal</button>
-                <button class="btn btn-danger" onclick="confirmReset()">Ya, Reset</button>
-            </div>
-        </div>
-    </div>
+    <!-- Audio Element (Takbiran Simulation) -->
+    <audio id="takbiranAudio" loop>
+        <!-- Note: Replace with actual takbiran audio file URL -->
+        <source src="" type="audio/mpeg">
+    </audio>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">
-        <i class="fas fa-check-circle"></i>
-        <span id="toastMessage">Progress tersimpan</span>
-    </div>
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('March 21, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
-    <script src="script.js"></script>
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            } else {
+                // Lebaran has arrived!
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                
+                // Update title
+                document.querySelector('.countdown-title').innerHTML = '🎉🌙 Selamat Hari Raya Idul Fitri! 🌙🎉';
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Audio Player Simulation
+        let isPlaying = false;
+        const audioBtn = document.getElementById('audioBtn');
+        const audioText = document.getElementById('audioText');
+        const audioIcon = audioBtn.querySelector('.audio-icon');
+        const audio = document.getElementById('takbiranAudio');
+
+        audioBtn.addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            
+            if (isPlaying) {
+                // Note: Audio source needs to be set to actual takbiran audio file
+                // For demo purposes, we simulate the play state
+                audioBtn.classList.add('playing');
+                audioText.textContent = 'Jeda Takbiran';
+                audioIcon.textContent = '⏸️';
+                
+                // Try to play if source exists
+                if (audio.querySelector('source').src) {
+                    audio.play().catch(e => console.log('Audio play failed:', e));
+                }
+            } else {
+                audioBtn.classList.remove('playing');
+                audioText.textContent = 'Putar Takbiran';
+                audioIcon.textContent = '▶️';
+                audio.pause();
+            }
+        });
+
+        // Name Input Personalization
+        const nameInput = document.getElementById('nameInput');
+        const personalizedGreeting = document.getElementById('personalizedGreeting');
+
+        nameInput.addEventListener('input', function() {
+            const name = this.value.trim();
+            if (name) {
+                personalizedGreeting.innerHTML = `<br><br>Kepada <span class="personalized-name">${name}</span>, semoga kebahagiaan dan kesuksesan selalu menyertaimu.`;
+            } else {
+                personalizedGreeting.innerHTML = '';
+            }
+            updateShareLink();
+        });
+
+        // WhatsApp Share
+        const shareBtn = document.getElementById('shareBtn');
+
+        function updateShareLink() {
+            const name = nameInput.value.trim();
+            const baseMessage = `*Selamat Idul Fitri 1447H* 🌙%0A%0A` +
+                `Saya *Ashari Saefataher* mengucapkan:%0A%0A` +
+                `Minal Aidzin Wal Faidzin%0A` +
+                `Mohon Maaf Lahir dan Batin%0A%0A` +
+                `Taqabbalallahu minna wa minkum,%0A` +
+                `shiyamana wa shiyamakum,%0A` +
+                `ja'ananallahu wa iyyakum minal 'aidin wal faizin.%0A%0A`;
+            
+            const personalMessage = name ? `_Kepada ${name}_%0A%0A` : '';
+            const closing = `Semoga Allah SWT menerima amal ibadah kita semua. 🙏%0A%0A` +
+                `Dari: Ashari Saefataher`;
+            
+            const fullMessage = baseMessage + personalMessage + closing;
+            shareBtn.href = `https://wa.me/?text=${fullMessage}`;
+        }
+
+        // Initialize share link
+        updateShareLink();
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add parallax effect to particles on mouse move
+        document.addEventListener('mousemove', function(e) {
+            const particles = document.querySelectorAll('.particle');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            particles.forEach((particle, index) => {
+                const speed = (index + 1) * 0.3;
+                const x = (window.innerWidth - e.pageX * speed) / 100;
+                const y = (window.innerHeight - e.pageY * speed) / 100;
+                particle.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Add entrance animation on load
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Console greeting
+        console.log('%c🌙 Selamat Idul Fitri 1447H 🌙', 'color: #FFD700; font-size: 24px; font-weight: bold; text-shadow: 0 0 10px #FFD700;');
+        console.log('%cDari: Ashari Saefataher', 'color: #87CEEB; font-size: 16px;');
+        console.log('%cMinal Aidzin Wal Faidzin', 'color: #2E86AB; font-size: 16px;');
+    </script>
 </body>
-</html>s
+</html>
