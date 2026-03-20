@@ -408,65 +408,45 @@
 
         /* QRIS Section */
         .qris-section {
-            margin: 30px 0;
-            animation: fadeInUp 1s ease-out 1s both;
-        }
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-        .qris-container {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
-            border-radius: 25px;
-            padding: 30px;
-            display: inline-block;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.2);
-            border: 2px solid var(--gold);
-            animation: pulse 3s ease-in-out infinite;
-        }
+/* container biar ga melebar */
+.qris-container {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #1f7a4c, #14532d);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
 
-        .qris-title {
-            color: var(--deep-blue);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
+/* judul */
+.qris-title {
+    color: #f6e27a;
+    margin-bottom: 10px;
+}
 
-        .qris-placeholder {
-            width: 220px;
-            height: 220px;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 3px dashed var(--gold);
-            margin: 0 auto;
-            transition: all 0.3s ease;
-        }
+/* gambar QRIS */
+.qris-icon img {
+    width: 150px;
+    max-width: 100%;
+    border-radius: 12px;
+}
 
-        .qris-placeholder:hover {
-            transform: scale(1.05);
-            border-color: var(--gold-light);
-        }
+/* teks */
+.qris-text {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.9;
+}
 
-        .qris-icon {
-            font-size: 5rem;
-            margin-bottom: 10px;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        .qris-text {
-            color: #666;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .qris-hint {
-            color: var(--deep-blue);
-            font-size: 1rem;
-            margin-top: 15px;
-            font-weight: 600;
-        }
-
+.qris-hint {
+    font-size: 12px;
+    opacity: 0.7;
+}
         /* Share Button */
         .share-btn {
             background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
