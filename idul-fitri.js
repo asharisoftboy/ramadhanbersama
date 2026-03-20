@@ -58,8 +58,9 @@ function toggleMusic() {
 // SHARE WA
 function shareWA() {
     const nama = document.getElementById("nama").value || "Sahabatku";
+    const nomer = "62881012137318
     const text = "Minal Aidzin Wal Faidzin, Mohon Maaf Lahir dan Batin dari " + nama + " 🙏";
-    window.open("https://wa.me/?text=0881012137318" + encodeURIComponent(text), "_blank");
+    window.open("https://wa.me/62881012137318?text=" + encodeURIComponent(text), "_blank");
 
 }
 
